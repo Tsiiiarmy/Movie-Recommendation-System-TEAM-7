@@ -13,17 +13,7 @@ const WishPage = () => {
   const [show, setShow] = useState("search-results");
   const [watchlist, setWatchList] = useState([]);
   const fetchMovies = async () => {
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://movies-api14.p.rapidapi.com/search',
-    //     params: {
-    //       query: searchedValue
-    //     },
-    //     headers: {
-    //       'X-RapidAPI-Key': '8e65f4cfa4msh2824b741d71fd55p163ae9jsn1fdde4753043',
-    //       'X-RapidAPI-Host': 'movies-api14.p.rapidapi.com'
-    //     }
-    //   };
+
     const moviesArray = [
       {
         id: 1,
