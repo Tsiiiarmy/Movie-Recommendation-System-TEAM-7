@@ -21,7 +21,7 @@ const WishPage = () => {
       url: "https://imdb8.p.rapidapi.com/title/find",
       params: { q: searchedValue },
       headers: {
-        "X-RapidAPI-Key": apiKey,
+        "X-RapidAPI-Key": "8dcb18c59bmsh9d15cdcd32b107bp1fca90jsn369dae7cf69b",
         "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
       },
     };
