@@ -13,7 +13,7 @@
 .wish-list-header {
     width: 100vw;
     height: 710px;
-    background-image: url(../../public/images/wishlist.jpg);
+    background-image: url(./images/wishlist.jpg);
     background-size: cover;
 }
 .wish-header-content {
@@ -66,7 +66,7 @@
     background-color: rgb(0, 0, 0);
     text-align: center;
     overflow: hidden;
-
+    margin-left: 5%;
 }
 .wishlist-image{
     

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+
 const WishPage = () => {
   const [search, setSearch] = useState("");
   const [searchedValue, setSearchValue] = useState("");
@@ -12,50 +13,62 @@ const WishPage = () => {
   const isMounted = React.useRef(true);
   const [show, setShow] = useState("search-results");
   const [watchlist, setWatchList] = useState([]);
+  const apiKey = import.meta.env.VITE_RAPIDAPI_KEY
   const fetchMovies = async () => {
 
-    const moviesArray = [
-      {
-        id: 1,
-        title: "Fast X",
-        image: "images/fastx.jpg",
-        year: 2023,
-        isFavourite: false,
+    // const moviesArray = [
+    //   {
+    //     id: 1,
+    //     title: "Fast X",
+    //     image: "images/fastx.jpg",
+    //     year: 2023,
+    //     isFavourite: false,
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "The Godfather",
+    //     image: "images/gof.jpg",
+    //     year: 1972,
+    //     isFavourite: false,
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Spider man HomeComing",
+    //     image: "images/sp.jpg",
+    //     year: 2018,
+    //     isFavourite: false,
+    //   },
+    // ];
+
+    const options = {
+      method: "GET",
+      url: "https://imdb8.p.rapidapi.com/title/find",
+      params: { q: searchedValue },
+      headers: {
+        "X-RapidAPI-Key": apiKey,
+        "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
       },
-      {
-        id: 2,
-        title: "The Godfather",
-        image: "images/gof.jpg",
-        year: 1972,
-        isFavourite: false,
-      },
-      {
-        id: 3,
-        title: "Spider man HomeComing",
-        image: "images/sp.jpg",
-        year: 2018,
-        isFavourite: false,
-      },
-    ];
+    };
+
     try {
-      // const response = await axios.request(options);
-      // if (response.data.results !== undefined) {
-      //   console.log(response.data.results);
-      //   setMovieData(response.data.results);
-      //   setisFetch(false);
-      //   setShow("search-results-show");
-      // }
-      const filterdList = searchedValue
-        ? moviesArray.filter((item) =>
-            item.title.toLowerCase().includes(searchedValue.toLowerCase())
-          )
-        : false;
-      if (filterdList) {
-        console.log(searchedValue);
-        setMovieData(filterdList);
+      const response = await axios.request(options);
+      if (response.data.results !== undefined) {
+        console.log(response.data.results);
+        setMovieData(response.data.results);
         setisFetch(false);
         setShow("search-results-show");
       }
+      // const filterdList = searchedValue
+      //   ? moviesArray.filter((item) =>
+      //       item.title.toLowerCase().includes(searchedValue.toLowerCase())
+      //     )
+      //   : false;
+      // if (filterdList) {
+      //   console.log(searchedValue);
+      //   setMovieData(filterdList);
+      //   setisFetch(false);
+      //   setShow("search-results-show");
+      // }
     } catch (error) {
       console.error(error);
     }
@@ -70,7 +83,7 @@ const WishPage = () => {
         {
           id: item.id,
           title: item.title,
-          image: item.image,
+          image: item.image.url,
           year: item.year,
           isFavourite: true,
         },
@@ -129,7 +142,7 @@ const WishPage = () => {
     </div>
   );
 };
-const SearchForm = ({search, setSearch, setSearchValue, setShow }) => {
+const SearchForm = ({ search, setSearch, setSearchValue, setShow }) => {
   return (
     <div className="search-flex">
       <form
@@ -173,8 +186,8 @@ const SearchCard = ({
           <div key={movie.id} className="search-card">
             <img
               className="search-image"
-              // src={movie.image ? movie.image.url : defaultpic}
-              src={movie.image}
+              src={movie.image ? movie.image.url : "/images/default.png"}
+              // src={movie.image}
             />
             <span className="search-title">
               {movie.title} <br /> {movie.year}
@@ -208,6 +221,7 @@ const Watchlist = ({ watchlist, handleRemoveItem }) => {
               <>
                 <img
                   className="wishlist-image"
+                  // src={movie.image}
                   src={movie.image}
                   alt={`Movie Poster for ${movie.title}`}
                 />
