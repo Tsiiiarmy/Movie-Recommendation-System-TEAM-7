@@ -4,70 +4,73 @@
   background-image: url("/images/wishlist.jpg");
   background-size: cover;
 }
-.contact-overlay{ 
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%); 
+.contact-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 .contact-grid {
-    margin:50px auto;
-    width: 45%;
-    height: 600px;
+  margin: 50px auto;
+  width: 45%;
+  height: 600px;
 }
 .contact-card {
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.09);
-
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.09);
 }
 .contact-detail {
-    width: 80%;
-    height: 80%;
-    margin:10px auto;
+  width: 80%;
+  height: auto;
+  margin: 10px auto;
 }
 .contact-head {
-    color:white;
-    padding:10px;
-    font-size: 2.5rem;
+  color: white;
+  padding: 10px;
+  font-size: 2.5rem;
 }
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 .form-input {
-    background-color: transparent;
-    margin:20px;
-    padding:10px;
-    color:white;
-    border: none;
-    border-bottom: 1px solid white; 
-    outline: none;
-
+  background-color: transparent;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.form-input:focus {
+  border-bottom: 1px solid white;
 }
 .input-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 .submit-card {
-    margin-left: auto;
+  margin-left: auto;
 }
 .contact-submit {
-    padding:10px 20px;
-    background-color: rgb(62, 62, 243);
-    border:none;
-    color:white;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgb(62, 62, 243);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .contact-submit:hover {
-    background-color: rgb(99, 99, 245);
-    
+  background-color: rgb(99, 99, 245);
 }
-
-
-
-
+textarea {
+  height: 100px;
+  resize: none;
+}

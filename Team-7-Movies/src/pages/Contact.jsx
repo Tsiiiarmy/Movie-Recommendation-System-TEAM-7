@@ -9,12 +9,31 @@ const Contact = () => {
               <h1 className="contact-head">Contact</h1>
               <form className="contact-form">
                 <div className="input-card">
-                    <input className="form-input" placeholder="Your name" type="text" />
-                    <input className="form-input"  placeholder="Your email" type="email" />
-                    <textarea className="form-input"  placeholder="Your Message ... " type="text" /> 
+                  <input
+                    className="form-input"
+                    placeholder="Your name"
+                    type="text"
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Your email"
+                    type="email"
+                  />
+                  <textarea
+                    className="form-input"
+                    placeholder="Your Message ... "
+                    type="text"
+                  ></textarea>
                 </div>
                 <div className="submit-card">
-                   <button className="contact-submit"> <i style={{paddingRight:"15px"}} className="fas fa-paper-plane"></i>Submit</button>
+                  <button className="contact-submit">
+                    {" "}
+                    <i
+                      style={{ paddingRight: "15px" }}
+                      className="fas fa-paper-plane"
+                    ></i>
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
