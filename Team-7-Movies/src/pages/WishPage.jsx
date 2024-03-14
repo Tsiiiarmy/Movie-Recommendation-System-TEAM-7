@@ -180,7 +180,7 @@ const SearchCard = ({
         ></i>
       </div>
       {isfetching ? (
-        <img src="images/loading.gif" />
+        <img style={{textAlign:"center"}} src="images/loading.gif" />
       ) : (
         movieData.map((movie) => (
           <div key={movie.id} className="search-card">

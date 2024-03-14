@@ -119,8 +119,7 @@ p {
     width: 100%px;
     display: none;
     z-index: 2000;
-    background-color: black;
-    backdrop-filter: blur(8px);
+    background-color: rgb(0, 0, 0);
     padding:15px 0px;
 
     
