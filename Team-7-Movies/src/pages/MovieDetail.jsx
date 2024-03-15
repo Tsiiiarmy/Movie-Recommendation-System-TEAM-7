@@ -4,12 +4,14 @@ import "../assets/detail.css";
 import axios from "axios";
 import React from "react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const MovieDetail = () => {
+  const { movieId } = useParams();
   const [fetchData, setFetch] = useState({});
   const [relatedList, setRelated] = useState([]);
   const fetchMovie = async () => {
-    const EndPoint = `http://www.omdbapi.com/?i=tt3896198&apikey=959cd228`;
+    const EndPoint = `http://www.omdbapi.com/?i=${movieId}&apikey=959cd228`;
     try {
       const results = await axios.get(EndPoint);
       setFetch(results.data);
@@ -31,6 +33,7 @@ const MovieDetail = () => {
     fetchMovie();
     RelatedMovies();
   }, []);
+  const navigate = useNavigate();
 
   return (
     <div className="detail-container">
@@ -59,33 +62,8 @@ const MovieDetail = () => {
           <div className="desc-title">Details</div>
           <div className="desc">
             <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-              officia ad mollitia molestiae, autem nihil, alias dolore aliquid
-              esse est aspernatur ipsa, a pariatur! Deserunt harum nisi aut sit
-              sapiente?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Quam, dignissimos corporis? Repellendus magni quam dolores dolore
-              sunt id, quidem animi laboriosam nam? Quasi, asperiores deserunt
-              in quas magni nihil quae! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Alias vitae fugit blanditiis reiciendis
-              laudantium, tempore id nihil quod distinctio deserunt quo odit
-              error ex sunt corrupti. Iure, doloremque? Harum, pariatur! Lorem
-              ip
+              {fetchData.Plot}
               <br />
-              sum, dolor sit amet consectetur adipisicing elit. Ipsa placeat
-              voluptatem dolor accusamus asperiores est saepe voluptatum
-              laudantium libero pariatur et mollitia numquam doloremque eligendi
-              distinctio, eveniet laboriosam sequi. Numquam? Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Cupiditate possimus rem
-              cumque harum aspernatur, iste magnam enim deleniti delectus
-              reprehenderit dicta voluptate eius maiores maxime qui nemo
-              officiis, sequi aperiam? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Maiores expedita minus veniam, provident quasi
-              doloremque fugiat voluptatem quod totam. Ab deserunt impedit
-              magnam sed obcaecati dicta provident laudantium totam natus! lorem
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Architecto, sit ad omnis a eveniet provident impedit cupiditate
-              tempore atque voluptas, quis placeat mollitia perferendis beatae
-              excepturi officia asperiores quaerat porro.
             </span>
           </div>
           <div className="detail-grid">
@@ -114,9 +92,12 @@ const MovieDetail = () => {
           <div className="related-movie">
             {relatedList.map((movie) => (
               <div className="related-card">
-              <img className="related-img" src={movie.Poster} />
+                <img className="related-img" src={movie.Poster} />
               </div>
             ))}
+          </div>
+          <div>
+            <button style={{padding:"20px", cursor:"", borderRadius:"10px", color:"white" , backgroundColor:"black"}} onClick={() => navigate(-1)}>Go Back</button>
           </div>
         </div>
       </div>

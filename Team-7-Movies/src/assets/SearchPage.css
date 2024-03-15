@@ -1,0 +1,230 @@
+.search-page-top {
+    width: auto;
+    height: 720px;
+    background-image: url(./images/wishlist.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.search-page-content {
+    width: auto;
+    height: 100%;
+    padding-top: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.search-bar-container {
+    padding-left: 100px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.result-container {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.poster-container {
+    margin-right: 20px;
+}
+
+.movie-info-row {
+    display: flex;
+    flex-direction: row;
+}
+.search-movie-form {
+    width: 100%;
+}
+.search-movie {
+    padding: 15px 10px;
+    width: 40%;
+    border-radius: 5px;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    color:white;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.search-movie::placeholder {
+    color: white;
+    font-size: 2rem;
+}
+.search-movie:focus  {
+    border-bottom: 2px solid white;
+}
+.search-bar-text {
+    color: white;
+    font-size: 4rem;
+    margin-left:100px ;
+}
+.search-btn {
+    padding: 15px;
+    background-color: red;
+    color: white;
+    margin: 4px;
+    border: none;
+    border-radius: 5px;
+}
+
+.movie-poster {
+    width: 210px;
+    height: 300px;
+}
+
+.movie-title {
+    width: 800px;
+    font-size: 40px;
+    line-height: 85px;
+}
+
+.tagline {
+    width: 800px;
+    height: 43px;
+    font-size: 25px;
+    line-height: 42.5px;
+}
+
+.movie-year {
+    width: 130px;
+    height: 43px;
+    font-size: 20px;
+    line-height: 42.5px;
+}
+
+.movie-runtime {
+    width: 135px;
+    height: 43px;
+    font-size: 20px;
+    line-height: 42.5px;
+    margin-left: 20px;
+}
+
+.movie-rating {
+    width: 90px;
+    height: 43px;
+    font-size: 20px;
+    line-height: 42.5px;
+    margin-left: 20px;
+}
+
+.movie-plot {
+    width: 800px;
+    height: 140px;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.movie-title,
+.tagline,
+.movie-year,
+.movie-runtime,
+.movie-rating,
+.movie-plot {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: justify;
+    font-weight: 700;
+}
+
+.links-container {
+    width: auto;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.details-link,
+.watchlist-link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #01050F;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.watchlist-link {
+    margin-left: 650px;
+}
+
+.details-link:hover,
+.watchlist-link:hover {
+    color: purple;
+}
+
+.search-page-bottom {
+    background-color: #E0E9F599;
+    height: auto;
+    width: auto;
+}
+
+.links-line {
+    background-color: #790606;
+    height: 7px;
+    width: auto;
+    margin-right: 40px;
+}
+
+.movies-section {
+    width: auto;
+    margin-top: 40px;
+}
+
+.movies-grid {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.movie-item {
+    width: 210px;
+    height: 400px;
+    text-align: center;
+}
+
+.movie-item img {
+    width: 210px;
+    height: 300px;
+}
+
+.movie-item p {
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-align: justify;
+}
+
+.related-movies,
+.recommended-movies,
+.top-movies {
+    color: rgba(141, 5, 111, 0.84);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.movie-title-year {
+    background-color: rgba(217, 217, 217, 1);
+    width: 210px;
+    height: 110px;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-title-year p {
+    margin: 3px;
+}
+
+.page-bottom-content {
+    padding-left: 110px;
+    padding-right: 80px;
+}
