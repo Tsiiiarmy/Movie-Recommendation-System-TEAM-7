@@ -1,6 +1,6 @@
 import React from 'react'
 import '../assets/NavBar.css'
-import movie from '../../public/images/movie.svg'
+import movie from '/images/movie.svg'
 
 const NavBar = () => {
   return (
@@ -16,7 +16,7 @@ const NavBar = () => {
             <li>FAVORITE</li>
             <li>CONTACT</li>
         </ul>
-        <button className='btn'>Join Now</button>
+            <button className='btn'>Join Now</button>
     </div>
    </div>
   )
