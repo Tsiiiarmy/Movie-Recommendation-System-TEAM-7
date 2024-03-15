@@ -1,13 +1,12 @@
 import { useState } from "react";
-import "./assets/wishlist.css";
 import "@fortawesome/fontawesome-free/css/all.css";
-
 import "./App.css";
-import WishPage from "./pages/WishPage";
+import SearchPage from "./pages/SearchPage";
+
 function App() {
   return (
     <>
-      <WishPage />
+      <SearchPage />
     </>
   );
 }
