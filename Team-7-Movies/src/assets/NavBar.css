@@ -1,0 +1,55 @@
+ .navbar{
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-left: 70px;
+ }
+ .logo{
+    width: 60px;
+    height: 50px;
+ }
+
+ .movie-title{
+    display: flex;
+    gap: 20px;
+    color: white;
+    flex-wrap: wrap;
+ }
+
+ .menu-btn{
+    display: flex;
+    gap: 20px;
+    padding-right: 30px;
+ }
+ .navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 32px;
+    color: white;
+ }
+ 
+ .navbar-menu>li:hover{
+    cursor: pointer;
+    color: orange;
+ }
+
+ .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: darkred;
+  }
+  
