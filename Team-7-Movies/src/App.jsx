@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "./assets/wishlist.css";
-import '@fortawesome/fontawesome-free/css/all.css';
 
 import "./App.css";
 import WishPage from "./pages/WishPage";
+import JoinNow from "./pages/JoinNow";
 function App() {
 
   return (
     <>
-      <WishPage/>
+      {/* <WishPage/> */}
+      <JoinNow />
     </>
   );
 }
