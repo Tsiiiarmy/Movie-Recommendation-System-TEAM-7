@@ -1,10 +1,10 @@
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import "../assets/JoinNow.css";
-
+import {useNavigate} from "react-router-dom"
 const JoinNow = () => {
   const form = useRef();
-
+  const navigate = useNavigate()
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -28,7 +28,7 @@ const JoinNow = () => {
         <img src="/images/movie.svg" alt="movie" />
         <h1>TEAM7MOVIES</h1>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={(e) => { e.preventDefault() , sendEmail(e) ,navigate("/wishpage")}}>
         <h1>JOIN OUR COMMUNITY</h1>
         <input
           type="text"
@@ -45,7 +45,7 @@ const JoinNow = () => {
           name="email"
           required
         />
-        <input type="submit" value="JOIN NOW" id="button" />
+        <input  type="submit" value="JOIN NOW" id="button" />
       </form>
     </div>
   );

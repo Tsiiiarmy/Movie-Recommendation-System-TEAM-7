@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-
 const WishPage = () => {
   const [search, setSearch] = useState("");
   const [searchedValue, setSearchValue] = useState("");
@@ -62,7 +61,9 @@ const WishPage = () => {
   };
 
   const handleRemoveItem = (item) => {
-    const newWatchList = watchlist.filter((movie) => movie.title !== item.title);
+    const newWatchList = watchlist.filter(
+      (movie) => movie.title !== item.title
+    );
     const updatedMovieList = movieData.map((movie) =>
       movie.id === item.id ? { ...movie, isFavourite: false } : movie
     );
@@ -80,16 +81,6 @@ const WishPage = () => {
 
   return (
     <div className="wish-list-container">
-      <div className="navbar">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Favorite</li>
-          <li>Contact</li>
-          <li>Join Us</li>
-
-        </ul>
-      </div>
       <div className="wish-list-header">
         <div className="wish-header-content">
           <div className="header-title">
@@ -113,9 +104,7 @@ const WishPage = () => {
         </div>
       </div>
       <Watchlist watchlist={watchlist} handleRemoveItem={handleRemoveItem} />
-      <div className="footer">
-        <p>&copy; 2024 Movie Recommendation System</p>
-      </div>
+
     </div>
   );
 };
@@ -132,7 +121,7 @@ const SearchForm = ({ search, setSearch, setSearchValue, setShow }) => {
       >
         <input
           className="search-movie"
-          placeholder="what do you want to watch"
+          placeholder="add some to your watch list"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
@@ -160,7 +149,7 @@ const SearchCard = ({
         ></i>
       </div>
       {isfetching ? (
-        <img style={{textAlign:"center"}} src="images/loading.gif" />
+        <img style={{ textAlign: "center" }} src="images/loading.gif" />
       ) : (
         movieData.map((movie) => (
           <div key={movie.id} className="search-card">
@@ -206,7 +195,7 @@ const Watchlist = ({ watchlist, handleRemoveItem }) => {
                   alt={`Movie Poster for ${movie.title}`}
                 />
                 <div className="movie-title">
-                  <p>
+                  <p style={{display:"flex"}}>
                     <i
                       onClick={() => handleRemoveItem(movie)}
                       className="fas fa-trash"
@@ -218,8 +207,8 @@ const Watchlist = ({ watchlist, handleRemoveItem }) => {
           ))
         ) : (
           <div className="no-watchlist">
-            <p>Add Some Favourite from above</p>
-            <i className="fa-solid fa-bucket"></i>
+            <p className="no-list-notice">Add Some Favourite from above</p>
+            <i style={{overflow:"hidden"}} className="fa-solid fa-bucket"></i>
           </div>
         )}
       </div>
