@@ -1,0 +1,112 @@
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.border-box {
+  display: flex;
+  border: 1px solid black; 
+  padding: 10px; 
+  width: 400px;
+  border-radius: 1px;
+  margin: 5px;
+  background-color: #d9d9d9;
+  color: black;
+}
+.photo{
+  border: 1px solid black; 
+  padding: 1px; 
+  margin: 10px;
+  border-radius: 5px;
+  margin-top: 0px;
+  height: 50px;
+  width: 50px;
+}
+.content{
+ align-items: end;
+ width: 350px;
+}
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  flex-direction: column;
+}
+.personal{
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  
+}
+.detail{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  margin-top: auto;
+  margin-bottom: 0px;
+  padding: 3px;
+  background-color: #d9d9d9; 
+}
+.border-box:hover{
+  background-color: #d9d10d01;
+  box-shadow: rgba(0, 0, 0, 0.4);
+}
+.rights{
+  border-radius: 5px;
+  font-weight: 500;
+}
+.title{
+  font-weight: 700;
+}
+
+.personal a.github-link,
+.detail a.telegram-link {
+  margin-right: 10px; 
+  display: inline-block; 
+  border-radius: 50%; 
+  padding: 5px; 
+  transition: box-shadow 0.3s ease; 
+}
+
+.personal a.github-link:hover,
+.detail a.telegram-link:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.project-description {
+  margin-left: 20px; 
+}
+
+
+
