@@ -1,5 +1,9 @@
 import "../assets/contact.css";
+import {useNavigate} from "react-router-dom"
+
 const Contact = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="contact-container">
       <div className="contact-overlay">
@@ -26,7 +30,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <div className="submit-card">
-                  <button className="contact-submit">
+                  <button onClick={()=> navigate("/searchpage")}  className="contact-submit">
                     {" "}
                     <i
                       style={{ paddingRight: "15px" }}
