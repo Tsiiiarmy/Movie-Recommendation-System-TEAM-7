@@ -48,6 +48,7 @@ function App() {
           <Route path="/searchpage" element={<SearchPage />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/join" element={<JoinNow />}></Route>
+          <Route path="*" element={<SearchPage/>}></Route>
         </Routes>
         <Footer></Footer>
       </Router>
