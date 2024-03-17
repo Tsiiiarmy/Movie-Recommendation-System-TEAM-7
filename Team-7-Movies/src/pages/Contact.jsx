@@ -36,7 +36,7 @@ const Contact = () => {
                       style={{ paddingRight: "15px" }}
                       className="fas fa-paper-plane"
                     ></i>
-                    Submit
+                    Submit Message
                   </button>
                 </div>
               </form>
