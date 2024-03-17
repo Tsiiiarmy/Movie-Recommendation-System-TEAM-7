@@ -16,7 +16,6 @@ const Footer = () => {
     justifyContent: 'space-between',
     alignItems: 'center', 
     fontFamily: 'Arial, sans-serif',
-    // fontFamily:'Saira Condensed',
 
   };
 
