@@ -1,58 +1,60 @@
- .navbar{
-    /* background-color: lightcoral;  */
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-    z-index: 9;
- }
- .logo{
-    width: 60px;
-    height: 50px;
- }
+.navbar {
+  /* background-color: lightcoral;  */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.logo {
+  width: 60px;
+  height: 50px;
+}
 
- .movie-title{
-    display: flex;
-    gap: 20px;
-    color: white;
-    flex-wrap: wrap;
- }
- h1{
-   color: white;
- }
+.nav-title {
+  display: flex;
+  gap: 20px;
+  color: white;
+  flex-wrap: wrap;
+  align-items: center;
+}
+h1 {
+  color: white;
+}
 
- .menu-btn{
-    display: flex;
-    gap: 20px;
-    padding-right: 30px;
- }
- .navbar-menu{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    gap: 32px;
-    color: white;
- }
- 
- .navbar-menu>li:hover{
-    cursor: pointer;
-    color: orange;
- }
+.menu-btn {
+  display: flex;
+  gap: 20px;
+  padding-right: 30px;
+  margin: 30px;
+}
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 32px;
+  color: white;
+}
 
- .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: red;
-    border: 2px solid red;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: darkred;
-  }
-  
+.navbar-menu > li:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: darkred;
+}
